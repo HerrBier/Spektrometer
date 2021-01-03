@@ -85,7 +85,7 @@ code {
     flex-wrap: wrap;
 }
 .magnetfeldZeichen div {
-    background-image: url(/ms/static/media/Magnetfeld.033546f4.svg);
+    background-image: url(/spectrometer/static/media/Magnetfeld.033546f4.svg);
     background-repeat: no-repeat;
     background-position: 50%;
     width: 10px;
