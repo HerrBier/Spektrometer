@@ -20,7 +20,7 @@
         ,
         ,
         function (e, t, a) {},
-        function (e, t, a) {},
+        function (e, t, a) {},    
         function (e, t, a) {
             "use strict";
             a.r(t);
@@ -35,9 +35,10 @@
                 o = a(6),
                 d = a.n(o);
             function v(e) {
-                var t = 3 / Math.sqrt(e.Bf),
+                var t = 2.8 / Math.sqrt(e.Bf),
                     a = 3 / Math.sqrt(e.Ba),
-                    n = Math.ceil(5 / Math.sqrt(e.Ef));
+                    mbfeldfilter = 2 / Math.sqrt(e.Ba),
+                    n = Math.ceil(2.275 / Math.sqrt(e.Ef));
                 return r.a.createElement(
                     "div",
                     { className: "ms-simulation" },
@@ -74,9 +75,9 @@
                         e.Ba > 0 &&
                             r.a.createElement(
                                 "div",
-                                { className: "magnetfeldZeichen" },
+                                { className: "magnetfeldFilter" },
                                 Object(s.a)(Array(500)).map(function (e, t) {
-                                    return r.a.createElement("div", { key: t, style: { margin: a } });
+                                    return r.a.createElement("div", { key: t, style: { margin: mbfeldfilter } });
                                 })
                             )
                     )
@@ -138,14 +139,15 @@
                                         var e, t;
                                         if ("B" === S) {
                                             var n = Math.random();
-                                            n < 0.4 ? ((e = 1.23457), (t = "firebrick")) : n < 0.8 ? ((e = 0.5), (t = "deeppink")) : n < 1 && ((e = 2.7), (t = "orange"));
-                                        } else "A" === S && ((e = 4), (t = "DarkViolet"));
+                                            n < 0.4 ? ((e = 1.23457), (t = "firebrick")) : n < 0.8 ? ((e = 0.5), (t = "deeppink")) : n < 1 && ((e = 2.7), (t = "LightSeaGreen"));
+                                        }
+                                        else "A" === S && ((e = 4), (t = "DarkViolet"));
                                         f(E.concat({ x: -40, y: 150, vx: 2 + 1.2 * (Math.random() - 0.5), vy: 0, m: e, t: t, passedFilter: !1 }));
                                     }
                                     E.forEach(function (e, t) {
                                         if (!(e.passedFilter && e.x > 600 && e.x < 650 && (e.y < 145 || e.y > 155))) {
                                             e.x > 660 && (e.passedFilter = !0),
-                                                ((e.x < 600 && (e.y > 300 || e.y < 0)) || (e.x > 600 && e.x < 650 && (e.y < 145 || e.y > 155)) || e.x > 1e3) &&
+                                                ((e.x < 600 && (e.y > 300 || e.y < 0)) || (e.x > 600 && e.x < 650 && (e.y < 145 || e.y > 155)) || e.x > 915) &&
                                                     f(
                                                         E.filter(function (e, a) {
                                                             return t !== a;
@@ -160,7 +162,7 @@
                                             var i = (+a * l) / e.m,
                                                 s = r * i,
                                                 m = -n * i;
-                                            (e.vx += s), (e.vy += m), (e.vy += c / e.m), (e.x += e.vx), (e.y += e.vy);
+                                            (e.vx += s), (e.vy += m), (e.vy += c / e.m), (e.x += e.vx), (e.y += e.vy)
                                         }
                                     });
                                 }
@@ -181,8 +183,8 @@
                             r.a.createElement("input", {
                                 type: "range",
                                 min: "0",
-                                max: "0.01",
-                                step: "0.001",
+                                max: "0.02",
+                                step: "0.002",
                                 value: h,
                                 onChange: function (e) {
                                     return g(e.target.value);
@@ -190,7 +192,7 @@
                             }),
                             "\\( E_{\\mathrm{F}} = \\)",
                             " ",
-                            (100 * h).toPrecision(1),
+                            (100 * h).toPrecision(2),
                             " ",
                             " \\( \\rm{\\frac{V}{m}} \\)",
                             r.a.createElement("br", null),
@@ -230,7 +232,7 @@
                             " ",
                             " \\(\\mathrm{T} \\)"
                         ),
-                        r.a.createElement(
+                            r.a.createElement(
                             "div",
                             { className: "constants" },
                             "Konstanten: ",
@@ -239,7 +241,7 @@
                             r.a.createElement("br", null),
                             r.a.createElement("span", null, "\\( 1 \\, u = 1{,}66 \\cdot 10^{-27} \\, \\mathrm{kg} \\)")
                         ),
-                        r.a.createElement(
+                            r.a.createElement(
                             "div",
                             { className: "controls" },
                             r.a.createElement("h1", null, "Massenspektrometer"),
@@ -297,24 +299,19 @@
                                 r.a.createElement(
                                     "div",
                                     { className: "anweisungen" },
-                                    "Die Probe enth\xe4lt nur eine Teilchensorte.",
+                                    "Die Probe A enth\xe4lt nur eine Teilchensorte.",
                                     r.a.createElement(
                                         "ol",
                                         null,
                                         r.a.createElement("li", null, "Bestimme die Masse \\(m\\) der Teilchen. "),
-                                        r.a.createElement("li", null, "Warum treffen die Teilchen nicht exakt an dem selben Ort auf? Beschreibe eine m\xf6gliche Ursache und eine Verbesserungsm\xf6glichkeit. ")
+                                        r.a.createElement("li", null, "Die Teilchen treffen nicht alle exakt am selben Ort auf den Detektor.",r.a.createElement("br", null), "Erläutere eine m\xf6gliche Ursache hierfür und eine Verbesserungsm\xf6glichkeit. ")
                                     )
                                 )
                         )
                     )
                 );
             };
-            Boolean("localhost" === window.location.hostname || "[::1]" === window.location.hostname || window.location.hostname.match(/^127(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/));
-            c.a.render(r.a.createElement(E, null), document.getElementById("root")),
-                "serviceWorker" in navigator &&
-                    navigator.serviceWorker.ready.then(function (e) {
-                        e.unregister();
-                    });
+            c.a.render(r.a.createElement(E, null), document.getElementById("root"));
         },
     ],
     [[7, 1, 2]],

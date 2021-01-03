@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
     <head>
         <meta charset="utf-8" />
         <link rel="icon" href="/spectrometer/favicon.ico" />
@@ -7,14 +7,30 @@
         <meta name="theme-color" content="#000000" />
         <meta name="description" content="Massenspektrometer nach Bainbridge" />
         <link rel="apple-touch-icon" href="/spectrometer/logo192.png" />
-        <link rel="manifest" href="/spectrometer/manifest.json" />
         <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
         <title>Massenspektrometer nach Bainbridge</title>
-        <link href="/spectrometer/static/css/main.8abc8b1d.chunk.css" rel="stylesheet" />
+        <link href="/spectrometer/static/css/main.css" rel="stylesheet" />
     </head>
-    <body>
-        <noscript>You need to enable JavaScript to run this app.</noscript>
-        <div id="root"></div>
+    <body style="transform-origin: 0 0;" onload="zoom()">
+        <noscript>You need to enable JavaScript to run this page.</noscript>
+        <div id="root" style="width: 1030px;height: 800px;"></div>
+<script>        window.addEventListener("resize", zoom);
+function zoom(){
+    var maxWidth = document.getElementById("root").offsetWidth;
+	var width = document.body.clientWidth;
+	var scaleW = width/maxWidth;
+    scale=scaleW;
+   if(width >= maxWidth /* & height >= maxHeight */)
+    {scale=1;
+    document.getElementById("root").style.transform = "scale(1)";
+    document.getElementById("root").style.WebkitTransform = "scale(1)";
+    document.body.style.transform = "scale(1)";
+    document.body.style.WebkitTransform = "scale(1)";}
+	else {
+        document.body.style.transform = "scale("+scale+")";
+        document.body.style.WebkitTransform = "scale("+scale+")";
+		} 
+	}  </script>       
         <script>
             !(function (i) {
                 function e(e) {
@@ -88,6 +104,6 @@
             })([]);
         </script>
         <script src="/spectrometer/static/js/2.f28a06b6.chunk.js"></script>
-        <script src="/spectrometer/static/js/main.4e0957d4.chunk.js"></script>
+        <script src="/spectrometer/static/js/main.js"></script>
     </body>
 </html>

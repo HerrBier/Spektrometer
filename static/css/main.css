@@ -8,7 +8,7 @@ code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, Courier New, monospace;
 }
 .ms-simulation {
-    position: relative;
+    position: absolute;
     margin: 290px 20px 20px 100px;
     width: 600px;
     height: 300px;
@@ -83,19 +83,39 @@ code {
     overflow: hidden;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 .magnetfeldZeichen div {
-    background-image: url(/spectrometer/static/media/Magnetfeld.033546f4.svg);
+    background-image: url(/spectrometer/static/media/Magnetfeld_filter.svg);
     background-repeat: no-repeat;
     background-position: 50%;
-    width: 10px;
-    height: 10px;
+    width: 17px;
+    height: 17px;
+}
+.magnetfeldFilter {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.magnetfeldFilter div {
+    background-image: url(/spectrometer/static/media/Magnetfeld_analyse.svg);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    width: 17px;
+    height: 17px;
 }
 .efeldZeichen {
     position: absolute;
     height: 100%;
     width: 100%;
     overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 .efeldZeichen div,
 .efeldZeichen img {
@@ -146,6 +166,8 @@ h1 {
     font-size: 110%;
 }
 .constants {
+    position: absolute;
+    top: 600px;
     padding: 25px 35px;
 }
 ol {
