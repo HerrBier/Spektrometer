@@ -139,7 +139,7 @@
                                         if ("B" === S) {
                                             var n = Math.random();
                                             n < 0.4 ? ((e = 1.23457), (t = "firebrick")) : n < 0.8 ? ((e = 0.5), (t = "deeppink")) : n < 1 && ((e = 2.7), (t = "orange"));
-                                        } else "A" === S && ((e = 4), (t = "green"));
+                                        } else "A" === S && ((e = 4), (t = "DarkViolet"));
                                         f(E.concat({ x: -40, y: 150, vx: 2 + 1.2 * (Math.random() - 0.5), vy: 0, m: e, t: t, passedFilter: !1 }));
                                     }
                                     E.forEach(function (e, t) {
