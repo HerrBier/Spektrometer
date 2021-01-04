@@ -87,7 +87,7 @@ code {
     justify-content: center;
 }
 .magnetfeldZeichen div {
-    background-image: url(/b-feld/anwendung/spectrometer/static/media/Magnetfeld_filter.svg);
+    background-image: url(/spectrometer/static/media/Magnetfeld_filter.svg);
     background-repeat: no-repeat;
     background-position: 50%;
     width: 17px;
@@ -103,7 +103,7 @@ code {
     justify-content: center;
 }
 .magnetfeldFilter div {
-    background-image: url(/b-feld/anwendung/spectrometer/static/media/Magnetfeld_analyse.svg);
+    background-image: url(/spectrometer/static/media/Magnetfeld_analyse.svg);
     background-repeat: no-repeat;
     background-position: 50%;
     width: 17px;
