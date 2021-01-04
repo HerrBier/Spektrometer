@@ -274,7 +274,7 @@
                                 r.a.createElement(
                                     "div",
                                     { className: "anweisungen" },
-                                    "Probe B ist eine Blutprobe und enthält drei verschiedene Teilchensorten."
+                                    "Probe B ist eine Blutprobe und enthält drei verschiedene Teilchensorten.",
                                     r.a.createElement(
                                         "ol",
                                         null,
