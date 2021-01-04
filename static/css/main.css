@@ -189,4 +189,4 @@ ol {
     margin-inline-end: 0px;
     padding-inline-start: 40px;
 }
-#footer{position:absolute;top:720px;line-height:1em;z-index:1}
+#footer{position:absolute;top:720px;width:800px;line-height:1em;z-index:1}
