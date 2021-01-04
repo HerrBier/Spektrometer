@@ -274,16 +274,17 @@
                                 r.a.createElement(
                                     "div",
                                     { className: "anweisungen" },
+                                    "Probe B ist eine Blutprobe und enthält drei verschiedene Teilchensorten."
                                     r.a.createElement(
                                         "ol",
                                         null,
-                                        r.a.createElement("li", null, "Bestimme die Massen aller Teilchen in der Blutprobe A. "),
+                                        r.a.createElement("li", null, "Bestimme die Massen aller Teilchen in der Blutprobe. "),
                                         r.a.createElement(
                                             "li",
                                             null,
                                             "Beurteile, ob die Probe das weit verbreitete Anabolikum ",
                                             r.a.createElement("b", null, "Methandienol"),
-                                            " enth\xe4lt.",
+                                            " enthalten kann.",
                                             r.a.createElement("br", null),
                                             "Methandienol ist C",
                                             r.a.createElement("sub", null, "20"),
