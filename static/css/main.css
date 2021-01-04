@@ -155,13 +155,13 @@ h1 {
 }
 .settingFilter {
     position: absolute;
-    top: 600px;
+    top: 620px;
     left: 300px;
     text-align: left
 }
 .settingAnalysator {
     position: absolute;
-    top: 600px;
+    top: 620px;
     left: 760px;
     text-align: left;
 }
