@@ -13,6 +13,7 @@ code {
     width: 600px;
     height: 300px;
     background-color: #eee;
+    top:-20px;
 }
 .point {
     position: absolute;
@@ -86,7 +87,7 @@ code {
     justify-content: center;
 }
 .magnetfeldZeichen div {
-    background-image: url(/spectrometer/static/media/Magnetfeld_filter.svg);
+    background-image: url(/b-feld/anwendung/spectrometer/static/media/Magnetfeld_filter.svg);
     background-repeat: no-repeat;
     background-position: 50%;
     width: 17px;
@@ -102,7 +103,7 @@ code {
     justify-content: center;
 }
 .magnetfeldFilter div {
-    background-image: url(/spectrometer/static/media/Magnetfeld_analyse.svg);
+    background-image: url(/b-feld/anwendung/spectrometer/static/media/Magnetfeld_analyse.svg);
     background-repeat: no-repeat;
     background-position: 50%;
     width: 17px;
@@ -136,39 +137,48 @@ code {
 .controls {
     padding-left: 100px;
     position: absolute;
-    top: 20px;
+    top: -10px;
     width: 600px;
+    text-align: left;
 }
 .controls input,
 .controls select {
     font-size: 150%;
     margin: 5px 10px;
-    padding: 10px 15px;
+    padding: 5px 15px;
+    position: relative;
+    top: 180px;
+    cursor: pointer;
 }
 h1 {
     margin: 5px 0;
 }
 .settingFilter {
     position: absolute;
-    top: 630px;
+    top: 600px;
     left: 300px;
+    text-align: left
 }
 .settingAnalysator {
     position: absolute;
-    top: 650px;
+    top: 600px;
     left: 760px;
+    text-align: left;
 }
 .setting input {
     margin: 10px;
 }
 .anweisungen {
+    position: absolute;
+    top: 25px;
     margin: 10px 0;
     font-size: 110%;
 }
 .constants {
     position: absolute;
-    top: 600px;
+    top: 580px;
     padding: 25px 35px;
+    text-align: left;
 }
 ol {
     display: block;
