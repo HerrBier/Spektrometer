@@ -25,10 +25,8 @@ function zoom(){
     scale=scaleW;
    if(width >= maxWidth)
     {scale=1;
-    document.getElementById("root").style.transform = "scale(1)";
-    document.getElementById("root").style.WebkitTransform = "scale(1)";
-    document.body.style.transform = "scale(1)";
-    document.body.style.WebkitTransform = "scale(1)";}
+    document.getElementById("wrapper").style.transform = "scale(1)";
+    document.getElementById("wrapper").style.WebkitTransform = "scale(1)";}
 	else {
         document.getElementById("wrapper").style.transform = "scale("+scale+")";
         document.getElementById("wrapper").style.WebkitTransform = "scale("+scale+")";
