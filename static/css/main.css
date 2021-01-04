@@ -13,7 +13,7 @@ code {
     width: 600px;
     height: 300px;
     background-color: #eee;
-    top:-20px;
+    top:0;
 }
 .point {
     position: absolute;
@@ -176,7 +176,7 @@ h1 {
 }
 .constants {
     position: absolute;
-    top: 580px;
+    top: 600px;
     padding: 25px 35px;
     text-align: left;
 }
