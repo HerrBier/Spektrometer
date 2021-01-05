@@ -183,23 +183,6 @@
                             r.a.createElement("input", {
                                 type: "range",
                                 min: "0",
-                                max: "0.02",
-                                step: "0.002",
-                                value: h,
-                                onChange: function (e) {
-                                    return g(e.target.value);
-                                },
-                            }),
-                            "\\( E_{\\mathrm{F}} = \\)",
-                            " ",
-                            (100 * h).toPrecision(2),
-                            " ",
-                            " \\( \\rm{\\frac{V}{m}} \\)",
-                            r.a.createElement("br", null),
-                            " ",
-                            r.a.createElement("input", {
-                                type: "range",
-                                min: "0",
                                 max: "0.01",
                                 step: "0.001",
                                 value: k,
@@ -211,7 +194,23 @@
                             " ",
                             k,
                             " ",
-                            " \\(\\rm{T} \\)"
+                            " \\(\\rm{T} \\)",
+                            r.a.createElement("br", null),
+                            r.a.createElement("input", {
+                                type: "range",
+                                min: "0",
+                                max: "0.02",
+                                step: "0.002",
+                                value: h,
+                                onChange: function (e) {
+                                    return g(e.target.value);
+                                },
+                            }),
+                            "\\( E_{\\mathrm{F}} = \\)",
+                            " ",
+                            (100 * h).toPrecision(2),
+                            " ",
+                            " \\( \\rm{\\frac{V}{m}} \\)"
                         ),
                         r.a.createElement(
                             "div",
