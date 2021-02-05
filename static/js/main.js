@@ -212,10 +212,10 @@
                             { className: "settingFilter setting" },
                             r.a.createElement("input", {
                                 type: "range",
-                                min: "-0.010",
+                                min: "0",
                                 max: "0.01",
 								start: "0.00",
-                                step: "0.001",
+                                step: "0.0005",
                                 value: k,
                                 onChange: function (e) {
                                     return O(e.target.value);
@@ -230,7 +230,7 @@
                             " ",
                             r.a.createElement("input", {
                                 type: "range",
-                                min: "-0.02",
+                                min: "0",
                                 max: "0.02",
                                 step: "0.001",
 								start: "0.00",
@@ -250,10 +250,10 @@
                             { className: "settingAnalysator setting" },
                             r.a.createElement("input", {
                                 type: "range",
-                                min: "-0.08",
+                                min: "0",
                                 max: "0.08",
 								start: "0.00",
-                                step: "0.01",
+                                step: "0.005",
                                 value: B,
                                 onChange: function (e) {
                                     return w(e.target.value);
