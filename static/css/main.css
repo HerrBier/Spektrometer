@@ -13,7 +13,7 @@ code {
     width: 600px;
     height: 300px;
     background-color: #eee;
-    top:0;
+    top:-20px;
 }
 .point {
     position: absolute;
@@ -58,7 +58,13 @@ code {
 }
 .ionenQuelle .ladung {
     position: relative;
-    top: 30px;
+    top: 20px;
+    left: -6px;
+}
+.ionenQuelle .quelle {
+    position: relative;
+    top: -24px;
+    left: -3px;
 }
 .blendeAnalysatorUnten {
     right: -50px;
@@ -87,7 +93,23 @@ code {
     justify-content: center;
 }
 .magnetfeldZeichen div {
-    background-image: url(/spectrometer/static/media/Magnetfeld_filter.svg);
+    background-image: url(/b-feld/anwendung/spectrometer/static/media/Magnetfeld_filter.svg);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    width: 17px;
+    height: 17px;
+}
+.magnetfeldZeichen2 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.magnetfeldZeichen2 div {
+    background-image: url(/b-feld/anwendung/spectrometer/static/media/Magnetfeld_filter2.svg);
     background-repeat: no-repeat;
     background-position: 50%;
     width: 17px;
@@ -103,7 +125,23 @@ code {
     justify-content: center;
 }
 .magnetfeldFilter div {
-    background-image: url(/spectrometer/static/media/Magnetfeld_analyse.svg);
+    background-image: url(/b-feld/anwendung/spectrometer/static/media/Magnetfeld_analyse.svg);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    width: 17px;
+    height: 17px;
+}
+.magnetfeldFilter2 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.magnetfeldFilter2 div {
+    background-image: url(/b-feld/anwendung/spectrometer/static/media/Magnetfeld_analyse2.svg);
     background-repeat: no-repeat;
     background-position: 50%;
     width: 17px;
@@ -123,7 +161,21 @@ code {
     height: 100%;
     display: block;
     float: left;
-    width: 11px;
+}
+.efeldZeichen2 {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.efeldZeichen2 div,
+.efeldZeichen2 img {
+    height: 100%;
+    display: block;
+    float: left;
 }
 .analysator {
     position: absolute;
@@ -147,7 +199,7 @@ code {
     margin: 5px 10px;
     padding: 5px 15px;
     position: relative;
-    top: 160px;
+    top: 10px;
     cursor: pointer;
 }
 h1 {
@@ -155,29 +207,30 @@ h1 {
 }
 .settingFilter {
     position: absolute;
-    top: 620px;
+    top: 600px;
     left: 300px;
     text-align: left;
-    width:254px;
+	width:280px;
 }
 .settingAnalysator {
     position: absolute;
-    top: 620px;
+    top: 600px;
     left: 760px;
     text-align: left;
+	width:280px;
 }
 .setting input {
     margin: 10px;
 }
 .anweisungen {
     position: absolute;
-    top: 40px;
+    top: 105px;
     margin: 10px 0;
     font-size: 110%;
 }
 .constants {
     position: absolute;
-    top: 600px;
+    top: 580px;
     padding: 25px 35px;
     text-align: left;
 }
@@ -190,4 +243,3 @@ ol {
     margin-inline-end: 0px;
     padding-inline-start: 40px;
 }
-#footer{position:absolute;top:720px;width:800px;line-height:1em;z-index:1}
