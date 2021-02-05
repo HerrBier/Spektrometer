@@ -78,7 +78,7 @@
                             "div",
                             { className: "efeldZeichen2" },
                             Object(s.a)(Array(30)).map(function (e, t) {
-                                return r.a.createElement("div", { key: t, style: { marginRight: n2, marginLeft: n2 } }, r.a.createElement("img", { src: "spectrometer/static/media/Efeld2.svg", alt: "" }));
+                                return r.a.createElement("div", { key: t, style: { marginRight: n2, marginLeft: n2 } }, r.a.createElement("img", { src: "/static/media/Efeld2.svg", alt: "" }));
                             })
                         ),
                     r.a.createElement("div", { className: "kondensator kondensatorOben" }),
