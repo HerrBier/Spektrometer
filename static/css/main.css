@@ -189,7 +189,7 @@ code {
 .controls {
     padding-left: 100px;
     position: absolute;
-    top: -10px;
+    top: 10px;
     width: 600px;
     text-align: left;
 }
@@ -224,7 +224,7 @@ h1 {
 }
 .anweisungen {
     position: absolute;
-    top: 105px;
+    top: 75px;
     margin: 10px 0;
     font-size: 110%;
 }
