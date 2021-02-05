@@ -10,7 +10,7 @@
             e.exports = a.p + "static/media/Skala.8349afd1.svg";
         },
         function (e, t, a) {
-            e.exports = a.p + "static/media/Efeld.7d33396d.svg";
+            e.exports = a.p + "static/media/Efeld.svg";
         },
         function (e, t, a) {
             e.exports = a(14);
@@ -36,15 +36,17 @@
                 d = a.n(o);
             function v(e) {
                 var t = 2.8 / Math.sqrt(e.Bf),
-                    a = 3 / Math.sqrt(e.Ba),
+					t2 = 2.8 / Math.sqrt(-e.Bf),
+                    a = 6 / Math.sqrt(e.Ba),
                     mbfeldfilter = 2 / Math.sqrt(e.Ba),
-                    n = Math.ceil(2.275 / Math.sqrt(e.Ef));
+				    mbfeldfilter2 = 2 / Math.sqrt(-e.Ba),
+                    n = Math.ceil(2.275 / Math.sqrt(e.Ef)),
+					n2 = Math.ceil(2.275 / Math.sqrt(-e.Ef))
                 return r.a.createElement(
                     "div",
                     { className: "ms-simulation" },
                     e.particles.map(function (e, t) {
-                        return r.a.createElement("div", { key: t, className: "point", style: { left: e.x, top: e.y, backgroundColor: e.t } });
-                    }),
+                        return r.a.createElement("div", { key: t, className: "point", style: { left: e.x, top: e.y, backgroundColor: e.t } });                    }),
                     r.a.createElement("div", { className: "blendeOben" }),
                     r.a.createElement("div", { className: "blendeUnten" }),
                     e.Bf > 0 &&
@@ -55,6 +57,14 @@
                                 return r.a.createElement("div", { key: a, style: { margin: t } });
                             })
                         ),
+					e.Bf < 0 &&
+                        r.a.createElement(
+                            "div",
+                            { className: "magnetfeldZeichen2" },
+                            Object(s.a)(Array(300)).map(function (e, a) {
+                                return r.a.createElement("div", { key: a, style: { margin: t2 } });
+                            })
+                        ),
                     e.Ef > 0 &&
                         r.a.createElement(
                             "div",
@@ -63,9 +73,19 @@
                                 return r.a.createElement("div", { key: t, style: { marginRight: n, marginLeft: n } }, r.a.createElement("img", { src: d.a, alt: "" }));
                             })
                         ),
+						 e.Ef < 0 &&
+                        r.a.createElement(
+                            "div",
+                            { className: "efeldZeichen2" },
+                            Object(s.a)(Array(30)).map(function (e, t) {
+                                return r.a.createElement("div", { key: t, style: { marginRight: n2, marginLeft: n2 } }, r.a.createElement("img", { src: "spectrometer/static/media/Efeld2.svg", alt: "" }));
+                            })
+                        ),
                     r.a.createElement("div", { className: "kondensator kondensatorOben" }),
                     r.a.createElement("div", { className: "kondensator kondensatorUnten" }),
-                    r.a.createElement("div", { className: "ionenQuelle" }, r.a.createElement("div", { className: "ladung" }, "\\(q = +e\\)")),
+                    r.a.createElement("div", { className: "ionenQuelle" },
+                    r.a.createElement("div", { className: "quelle" }, "Quelle"),
+                    r.a.createElement("div", { className: "ladung" }, "\\(q = -e\\)")),
                     r.a.createElement("div", { className: "blendeUnten blendeAnalysatorUnten " }),
                     r.a.createElement("div", { className: "schirm" }),
                     r.a.createElement("div", { className: "skala" }, r.a.createElement("img", { src: u.a, alt: "Skala" })),
@@ -79,7 +99,15 @@
                                 Object(s.a)(Array(500)).map(function (e, t) {
                                     return r.a.createElement("div", { key: t, style: { margin: mbfeldfilter } });
                                 })
-                            )
+                            ),
+						e.Ba < 0 &&
+                            r.a.createElement(
+                                "div",
+                                { className: "magnetfeldFilter2" },
+                                Object(s.a)(Array(500)).map(function (e, t) {
+                                    return r.a.createElement("div", { key: t, style: { margin: mbfeldfilter2 } });
+                                })
+                            )	
                     )
                 );
             }
@@ -112,7 +140,9 @@
                     A = Object(n.useState)("A"),
                     M = Object(i.a)(A, 2),
                     S = M[0],
+                    speed = 1,
                     C = M[1];
+                    
                 return (
                     Object(n.useEffect)(
                         function () {
@@ -139,15 +169,15 @@
                                         var e, t;
                                         if ("B" === S) {
                                             var n = Math.random();
-                                            n < 0.4 ? ((e = 1.23457), (t = "firebrick")) : n < 0.8 ? ((e = 0.5), (t = "deeppink")) : n < 1 && ((e = 2.7), (t = "LightSeaGreen"));
-                                        }
-                                        else "A" === S && ((e = 2), (t = "DarkViolet"));
-                                        f(E.concat({ x: -40, y: 150, vx: 3 + 2 * (Math.random() - 0.5), vy: 0, m: e, t: t, passedFilter: !1 }));
+                                            n < 0.34 ? ((e = -2), (t = "firebrick"), (speed = 3.0+0.8*(Math.random()-.5))) : n < 0.67 ? ((e = -1.223), (t = "deeppink"), (speed = 3.64+1*(Math.random()-.5))) : n < 1 && ((e = -2.7), (t = "LightSeaGreen"), (speed = 2.5+0.6*(Math.random()-.5)));
+                                        } 
+                                        else "A" === S && ((e = -1.4), (t = "DarkViolet"), (speed = 3.2+1*(Math.random()-.5)));
+                                        f(E.concat({ x: -40, y: 150, vx: speed, vy: 0, m: e, t: t, passedFilter: !1 }));
                                     }
                                     E.forEach(function (e, t) {
                                         if (!(e.passedFilter && e.x > 600 && e.x < 650 && (e.y < 145 || e.y > 155))) {
                                             e.x > 660 && (e.passedFilter = !0),
-                                                ((e.x < 600 && (e.y > 300 || e.y < 0)) || (e.x > 600 && e.x < 650 && (e.y < 145 || e.y > 155)) || e.x > 915) &&
+                                                ((e.x < 600 && (e.y > 300 || e.y < 10)) || (e.x > 600 && e.x < 650 && (e.y < 146 || e.y > 154)) || e.x > 915 || e.y < -260 || e.y >300 ) &&
                                                     f(
                                                         E.filter(function (e, a) {
                                                             return t !== a;
@@ -158,7 +188,7 @@
                                                 r = e.vy / a,
                                                 l = 0,
                                                 c = 0;
-                                            e.x >= 0 && e.x < 600 ? ((l = k), (c = h)) : e.x > 650 && ((l = B), (c = 0));
+                                            e.x >= 0 && e.x < 600 ? ((l = (-1)*k), (c = (-1)*h)) : e.x > 650 && ((l = (-1)*B), (c = 0));
                                             var i = (+a * l) / e.m,
                                                 s = r * i,
                                                 m = -n * i;
@@ -182,8 +212,9 @@
                             { className: "settingFilter setting" },
                             r.a.createElement("input", {
                                 type: "range",
-                                min: "0",
+                                min: "-0.010",
                                 max: "0.01",
+								start: "0.00",
                                 step: "0.001",
                                 value: k,
                                 onChange: function (e) {
@@ -196,11 +227,13 @@
                             " ",
                             " \\(\\rm{T} \\)",
                             r.a.createElement("br", null),
+                            " ",
                             r.a.createElement("input", {
                                 type: "range",
-                                min: "0",
+                                min: "-0.02",
                                 max: "0.02",
-                                step: "0.002",
+                                step: "0.001",
+								start: "0.00",
                                 value: h,
                                 onChange: function (e) {
                                     return g(e.target.value);
@@ -217,9 +250,10 @@
                             { className: "settingAnalysator setting" },
                             r.a.createElement("input", {
                                 type: "range",
-                                min: "0",
-                                max: "0.05",
-                                step: "0.005",
+                                min: "-0.08",
+                                max: "0.08",
+								start: "0.00",
+                                step: "0.01",
                                 value: B,
                                 onChange: function (e) {
                                     return w(e.target.value);
@@ -243,7 +277,7 @@
                             r.a.createElement(
                             "div",
                             { className: "controls" },
-                            r.a.createElement("h1", null, "Massenspektrometer"),
+                            r.a.createElement("h1", null, "Übungen zum Massenspektrometer"),
                             r.a.createElement(
                                 "select",
                                 {
@@ -273,7 +307,7 @@
                                 r.a.createElement(
                                     "div",
                                     { className: "anweisungen" },
-                                    "Probe B ist eine Blutprobe und enthält drei verschiedene Teilchensorten.",
+                                    "Probe B ist eine Blutprobe und enth\xe4lt drei verschiedene Teilchensorten.",
                                     r.a.createElement(
                                         "ol",
                                         null,
@@ -283,7 +317,7 @@
                                             null,
                                             "Beurteile, ob die Probe das weit verbreitete Anabolikum ",
                                             r.a.createElement("b", null, "Methandienol"),
-                                            " enthalten kann.",
+                                            " enth\xe4lt.",
                                             r.a.createElement("br", null),
                                             "Methandienol ist C",
                                             r.a.createElement("sub", null, "20"),
