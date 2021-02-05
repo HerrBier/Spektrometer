@@ -277,7 +277,6 @@
                             r.a.createElement(
                             "div",
                             { className: "controls" },
-                            r.a.createElement("h1", null, "Übungen zum Massenspektrometer"),
                             r.a.createElement(
                                 "select",
                                 {
