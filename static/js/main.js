@@ -159,6 +159,7 @@
                     Object(n.useEffect)(
                         function () {
                             var e = setInterval(function () {
+								if(E.length>100){E.splice(0, 1);}
                                 if (a) {
                                     if (
                                         (u(function (e) {
