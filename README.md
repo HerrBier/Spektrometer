@@ -1,4 +1,4 @@
-# spectrometer
+# Skektrometer
 Massenspektrometer nach Bainbridge
 
 Simulation für den Physikunterricht der Oberstufe.
